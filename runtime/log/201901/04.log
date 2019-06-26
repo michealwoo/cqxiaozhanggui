@@ -1,0 +1,28 @@
+[ 2019-01-04T15:23:28+08:00 ] 172.26.105.19 220.181.108.161 GET /thinkphp/start.php
+[ log ] wechatshop.vrccn.com/thinkphp/start.php [运行时间：0.022869s][吞吐率：43.73req/s] [内存消耗：1,807.40kb] [文件加载：32]
+[ info ] [ LANG ] /www/wwwroot/wechatshop.vrccn.com/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /www/wwwroot/wechatshop.vrccn.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wechatshop.vrccn.com',
+  'connection' => 'close',
+  'user-agent' => 'Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)',
+  'accept-language' => 'zh-cn,zh-tw',
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

@@ -1,0 +1,56 @@
+{extend name="wap/default_new/base" /}
+{block name="resources"}
+<link rel="stylesheet" href="__TEMP__/{$style}/public/css/pay/get_pay_value.css"/>
+{/block}
+
+{block name="goodsHead"}
+<section class="head">
+	<a class="head_back" href="{$unpaid_goback}"><i class="icon-back"></i></a>
+	<div class="head-title">{:lang('order_payments')}</div>
+</section>
+{/block}
+
+{block name="main"}
+<div class="head-info">
+	<div class="head-pay">支付金额</div>
+	<div class="head-pay-value">￥{$pay_value.pay_money}</div>
+</div>
+<div class="pay-type-item">
+	<div class="codes">
+		<div class="wchat-weixin">
+			<img src="__TEMP__/{$style}/public/images/weifu.png" class="wchat-photo">
+			<span class="wchat-title">{:lang('wechat_payment')}</span>
+			<span id="wchatpay"><img src="__TEMP__/{$style}/public/images/hgou.png"></span>
+		</div>
+		<input type="hidden" id="out_trade_no" value="{$pay_value.out_trade_no}">
+		<input type="hidden" id="uid" value="{$pay_value.uid}">
+	</div>
+</div>
+
+<section class="s-btn">
+	<a class="alipay" type="button" onclick="calculate()">{:lang('confirm_payment')}</a>
+</section>
+
+{include file="wap/default_new/controlCopyRight"}
+<script>
+var __IMG__ = '__TEMP__/{$style}/public/images';
+$(function(){
+	$(".pay-type-item .codes>div>span[id]").html("<img src='" + __IMG__ + "/hgou.png'>");
+	$(".pay-type-item .codes>div:eq(0)>span[id]").html("<img src='" + __IMG__ + "/segou.png'>");
+});
+function calculate()
+{
+	var uid = $('#uid').val();
+	var out_trade_no = $('#out_trade_no').val();
+	//微信支付
+	window.location.href = __URL("APP_MAIN/pay/vipwechatpay?out_trade_no=" + out_trade_no + "&uid=" + uid);
+}
+$(".wchat-weixin").click(function() {
+	$("#pay_type").val(0);
+	$("#alipay").html("<img src='" + __IMG__ + "/hgou.png'>");
+	$("#wchatpay").html("<img src='" + __IMG__ + "/segou.png'>");
+	$("#unionpay").html("<img src='" + __IMG__ + "/hgou.png'>");
+})
+</script>
+{/block}
+{block name="bottom"}{/block}

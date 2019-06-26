@@ -1,0 +1,3 @@
+<?php
+//000000000000a:8:{s:2:"id";i:163;s:11:"instance_id";i:0;s:3:"key";s:12:"SERVICE_ADDR";s:5:"value";a:5:{s:19:"meiqia_service_addr";s:0:"";s:15:"kf_service_addr";s:0:"";s:15:"qq_service_addr";s:9:"703724845";s:11:"checked_num";s:1:"3";s:12:"service_addr";s:45:"http://sighttp.qq.com/msgrd?v=1&uin=703724845";}s:4:"desc";s:18:"客服链接地址";s:6:"is_use";i:0;s:11:"create_time";i:1548387496;s:11:"modify_time";i:1549108396;}
+?>
